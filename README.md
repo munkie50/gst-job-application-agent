@@ -1,2 +1,2 @@
-# gst
-An LLM-driven job application tracker.
+# Pending Name
+Description to be added.
