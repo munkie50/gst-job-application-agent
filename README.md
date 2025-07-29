@@ -45,3 +45,6 @@ You should see: Server is running on port 5000
 ## To run the Frontend Server
 npm run dev
 You should see: Frontend runs at http://localhost:5173
+
+## Third-party licenses
+- pdf-resume-builder: Copyright (c) 2021-present Radosław Szamszur (MIT License)
