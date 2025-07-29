@@ -1,19 +1,26 @@
-// backend/server.js
+// server.js
+require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
+const { ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node');
 
-dotenv.config();
 const app = express();
+const port = process.env.PORT || 3001;
 
-app.use(cors());
+// Middleware
 app.use(express.json());
+app.use(ClerkExpressWithAuth());
 
-app.get('/', (req, res) => {
-  res.send('Backend is running 🚀');
+// Example protected route
+app.get('/api/protected', (req, res) => {
+  const { userId } = req.auth;
+
+  if (!userId) {
+    return res.status(401).json({ message: 'Unauthorized' });
+  }
+
+  res.json({ message: `Hello, user ${userId}` });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
