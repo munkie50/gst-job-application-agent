@@ -1,13 +1,14 @@
 // src/pages/landingPage.jsx
 import { useNavigate } from 'react-router-dom';
 import '../styles/landingPage.css';
+import astronaut from '../assets/images/astronaut.gif';
 
 export default function LandingPage() {
   const navigate = useNavigate();
 
   return (
     <div className="landing-wrapper">
-      <img src="/robot.gif" alt="Robot" className="mascot" />
+      <img src={astronaut} alt="Astronaut" className="mascot" />
       <h1>Embark on your next job expedition</h1>
       <p>Track applications, craft perfect cover letters, and discover your next role.</p>
       <div className="button-group">

@@ -1,5 +1,5 @@
 /* styles/landingPage.css */
-
+@import url('./fonts.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
 
 body {
@@ -20,19 +20,20 @@ body {
 }
 
 .mascot {
-  width: 100px;
+  width: 150px;
   height: auto;
   margin-bottom: 1.5rem;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'PP Mondwest', serif; /* 👈 updated */
   font-size: 1.8rem;
   color: #ffffff;
   margin-bottom: 1rem;
 }
 
 p {
+  font-family: 'PP Neue Montreal', sans-serif;
   font-size: 0.9rem;
   color: #ffffff;
   margin-bottom: 2rem;
