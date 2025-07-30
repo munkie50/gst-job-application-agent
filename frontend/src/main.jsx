@@ -7,7 +7,6 @@ import Header from './components/header';
 import LandingPage from './pages/landingPage';
 import SignInPage from './pages/signIn';
 import SignUpPage from './pages/signUp';
-import App from './App.jsx'; // will render only after auth
 import './index.css';
 
 const PUBLISHABLE_KEY = 'pk_test_bGl2ZS1iaXNvbi0zMC5jbGVyay5hY2NvdW50cy5kZXYk'; // replace with your real key
@@ -21,7 +20,6 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<LandingPage />} />
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/app/*" element={<App />} />
         </Routes>
       </BrowserRouter>
     </ClerkProvider>
