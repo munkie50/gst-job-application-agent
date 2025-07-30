@@ -1,7 +1,6 @@
 /* src/components/header.css */
 
 .site-header {
-  position: fixed; /* keep it stuck to the top */
   top: 0;
   left: 0;
   width: 100%;
@@ -36,3 +35,6 @@
   object-fit: contain;
 }
 
+.logo-link {
+  text-decoration: none;
+}

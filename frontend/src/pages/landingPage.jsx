@@ -8,12 +8,12 @@ export default function LandingPage() {
 
   return (
     <div className="landing-wrapper">
-      <img src={astronaut} alt="Astronaut" className="mascot" />
+      <img id="landing-graphic" src={astronaut} alt="Astronaut"/>
       <h1>Embark on your next job expedition</h1>
       <p>Track applications, craft perfect cover letters, and discover your next role.</p>
       <div className="button-group">
-        <button onClick={() => navigate('/sign-in')}>Sign In</button>
-        <button onClick={() => navigate('/sign-up')}>Sign Up</button>
+        <button id="sign-in-button" onClick={() => navigate('/sign-in')}>Sign In</button>
+        <button id="sign-up-button" onClick={() => navigate('/sign-up')}>Sign Up</button>
       </div>
     </div>
   );
