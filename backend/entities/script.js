@@ -1,4 +1,4 @@
-// models/JobApplicant.js
+// script.js
 const mongoose = require('mongoose');
 
 const ResumeSchema = new mongoose.Schema({
@@ -15,4 +15,7 @@ const JobApplicantSchema = new mongoose.Schema({
   resumes: [ResumeSchema]
 });
 
-module.exports = mongoose.model('JobApplicant', JobApplicantSchema);
+const JobApplicant = mongoose.model('JobApplicant', JobApplicantSchema);
+const Resume = mongoose.model('Resume', ResumeSchema);
+
+module.exports = { JobApplicant, Resume };

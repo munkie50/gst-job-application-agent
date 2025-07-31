@@ -1,6 +1,17 @@
-const JobApplicant = require('./models/JobApplicant');
+// JobApplicant.js
+
+const mongoose = require('mongoose');
+const {JobApplicant} = require('./script');
+
+mongoose.connect('mongodb://localhost:27017/jobapp_db', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 async function insertApplicant() {
+  // 🧹 First, delete any existing applicant with the same ID
+  await JobApplicant.deleteOne({ applicant_id: "A001" });
+
   const applicant = new JobApplicant({
     full_name: "Alice Tan",
     applicant_id: "A001",

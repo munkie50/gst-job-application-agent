@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const JobApplicant = require('./models/JobApplicant');
-
+const JobApplicant = require('./script');
+addResume();
 async function addResume(applicantId) {
   try {
     const applicant = await JobApplicant.findOne({ applicant_id: applicantId });
