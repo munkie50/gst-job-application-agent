@@ -16,39 +16,56 @@
   padding: 2rem;
   width: 90%;
   max-width: 400px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.onboarding-subtitle {
-  color: #6b7280;
-  letter-spacing: 0.1em;
-  font-size: 0.875rem;
+.onboarding-welcome {
+  font-family: 'PP Fraktion Mono', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  color: #4E5662; /* dark gray */
+  letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
+
 .onboarding-name {
-  font-size: 1.5rem;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 32px;
   font-weight: 700;
+  color: #252525;
   margin-bottom: 0.5rem;
 }
 
 .onboarding-intro {
-  color: #4b5563;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #252525;
+  line-height: 93%; /* = 22.32px */
   margin-bottom: 1.5rem;
+  text-align: left;
+  align-self: stretch;
 }
+
 
 .onboarding-divider {
   margin-bottom: 1.5rem;
 }
 
 .onboarding-section-title {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #6b7280;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.5rem;
+  flex: 1 0 0;
+  font-family: 'PP Fraktion Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 121%; /* 19.36px */
+  color: #4E5662;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
+
 
 .onboarding-options {
   display: flex;
@@ -58,35 +75,55 @@
 }
 
 .onboarding-option-btn {
-  width: 9rem;
-  padding: 1rem;
-  background-color: white;
-  border: 1px solid #6366f1;
-  color: #4f46e5;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
+  padding: 20px 28px;
+  gap: 25px;
+
+  border-radius: 20px;
+  border: 1px solid #6E7DE1; /* light blue border */
+  background-color: #EAEAF7; /* pale blue */
+  box-shadow: 0 2px 8px rgba(78, 86, 98, 0.10);
+
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 14px;
   font-weight: 500;
+  color: #4F46E5;
+
   cursor: pointer;
   transition: background-color 0.2s;
+  width: fit-content;
 }
+
+.onboarding-gif-icon {
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1 / 1;
+  background-color: lightgray;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4px; /* optional, adds soft rounding */
+}
+
+/* Specific backgrounds and shadows per GIF */
+.file-gif {
+  background-image: url('../assets/images/file-highlight.gif');
+  box-shadow: 0 2px 4px rgba(78, 86, 98, 0.4); /* #4E5662 */
+}
+
+.typewriter-gif {
+  background-image: url('../assets/images/typewriter.gif');
+  box-shadow: 0 2px 2px rgba(78, 86, 98, 0.4);
+}
+
 
 .onboarding-option-btn:hover {
   background-color: #eef2ff;
 }
 
-.onboarding-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.onboarding-option-text {
-  line-height: 1.2;
-}
 
 .onboarding-skip-btn {
   width: 100%;
