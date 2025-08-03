@@ -1,7 +1,7 @@
-// JobApplicant.js
+// User.js
 
 const mongoose = require('mongoose');
-const {JobApplicant} = require('./script');
+const {User} = require('./script');
 
 mongoose.connect('mongodb://localhost:27017/jobapp_db', {
   useNewUrlParser: true,
@@ -10,9 +10,9 @@ mongoose.connect('mongodb://localhost:27017/jobapp_db', {
 
 async function insertApplicant() {
   // 🧹 First, delete any existing applicant with the same ID
-  await JobApplicant.deleteOne({ applicant_id: "A001" });
+  await User.deleteOne({ applicant_id: "A001" });
 
-  const applicant = new JobApplicant({
+  const applicant = new User({
     full_name: "Alice Tan",
     applicant_id: "A001",
     email: "alice@example.com",
